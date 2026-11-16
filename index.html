@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bisht Travel India - भारत की खूबसूरत जगहों, ट्रैवल वीडियो और गाइड्स की खोज करें।">
+<title>Bisht Travel India | Explore India</title>
+<style>
+:root{--gold:#d7b45a;--bg:#090909;--panel:#151515;--muted:#bdb7a8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#f7f3e9;font-family:Arial, sans-serif;line-height:1.6}
+header{position:sticky;top:0;z-index:5;background:#090909ee;border-bottom:1px solid #3a3019;padding:14px 6%;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font-size:21px;font-weight:800;color:var(--gold);letter-spacing:.5px}nav{display:flex;gap:18px;flex-wrap:wrap}a{color:inherit;text-decoration:none}nav a:hover,.gold{color:var(--gold)}
+.hero{min-height:70vh;display:grid;place-items:center;text-align:center;padding:70px 7%;background:linear-gradient(#0009,#000b),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80') center/cover}
+.hero h1{font-size:clamp(38px,7vw,72px);line-height:1.1;margin:0 0 16px}.hero p{max-width:700px;color:#eee;font-size:18px;margin:0 auto 26px}
+.btn{display:inline-block;background:var(--gold);color:#111;padding:12px 20px;border-radius:30px;font-weight:700;margin:5px}
+section{padding:58px 6%;max-width:1250px;margin:auto}.section-title{text-align:center;font-size:30px;color:var(--gold);margin:0 0 8px}.sub{text-align:center;color:var(--muted);margin:0 0 30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}.card{background:var(--panel);border:1px solid #332b1b;border-radius:16px;overflow:hidden}.card img{width:100%;height:170px;object-fit:cover;display:block}.card div{padding:16px}.card h3{margin:0 0 7px;color:var(--gold)}.card p{margin:0;color:#d0cabb}
+.video-box{background:var(--panel);padding:24px;border-radius:16px;border:1px solid #332b1b;text-align:center}
+footer{text-align:center;padding:30px 15px;border-top:1px solid #332b1b;color:var(--muted)}.social{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:16px}
+.lang{background:transparent;color:var(--gold);border:1px solid var(--gold);padding:7px 12px;border-radius:20px}
+@media(max-width:600px){header{justify-content:center}nav{justify-content:center;gap:12px}.hero{min-height:60vh}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">BISHT TRAVEL INDIA</div>
+  <nav><a href="#destinations">Destinations</a><a href="#videos">Videos</a><a href="#guides">Travel Guides</a><a href="#contact">Contact</a></nav>
+  <button class="lang" onclick="toggleLang()">हिंदी / English</button>
+</header>
+<main>
+<section class="hero">
+ <div>
+  <h1 id="heroTitle">भारत की खूबसूरती <span class="gold">देखिए हमारे साथ</span></h1>
+  <p id="heroText">घूमिए भारत की शानदार जगहों पर — ट्रैवल वीडियो, उपयोगी गाइड और नई यात्राओं की कहानियों के साथ।</p>
+  <a class="btn" href="#destinations" id="explore">जगहें एक्सप्लोर करें</a>
+  <a class="btn" href="https://www.youtube.com/@BishtAITravel" target="_blank" rel="noopener">YouTube पर देखें</a>
+ </div>
+</section>
+<section id="destinations">
+ <h2 class="section-title" id="destTitle">लोकप्रिय जगहें</h2><p class="sub" id="destSub">भारत के कुछ खूबसूरत ट्रैवल डेस्टिनेशन</p>
+ <div class="grid">
+  <article class="card"><img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80" alt="Goa beach"><div><h3>गोवा</h3><p>समुद्र तट, खूबसूरत नज़ारे और यादगार सफर।</p></div></article>
+  <article class="card"><img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=900&q=80" alt="Manali mountains"><div><h3>मनाली</h3><p>पहाड़, घाटियां और ठंडी हवाओं का अनुभव।</p></div></article>
+  <article class="card"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80" alt="Mountain landscape"><div><h3>उत्तराखंड</h3><p>हिमालय, मंदिर और प्रकृति की शांत वादियां।</p></div></article>
+  <article class="card"><img src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=900&q=80" alt="Rajasthan palace"><div><h3>राजस्थान</h3><p>किले, महल और रंगों से भरी संस्कृति।</p></div></article>
+ </div>
+</section>
+<section id="videos">
+ <h2 class="section-title" id="videoTitle">ट्रैवल वीडियो</h2><p class="sub" id="videoSub">हमारे नए वीडियो YouTube पर देखें</p>
+ <div class="video-box"><p>नई जगहों की रोमांचक यात्रा और रहस्यमयी कहानियां देखने के लिए हमारे चैनल से जुड़ें।</p><a class="btn" href="https://www.youtube.com/@BishtAITravel" target="_blank" rel="noopener">Bisht AI Travel – YouTube</a></div>
+</section>
+<section id="guides">
+ <h2 class="section-title" id="guideTitle">ट्रैवल गाइड</h2><p class="sub" id="guideSub">यात्रा से पहले काम आने वाली जानकारी</p>
+ <div class="grid">
+  <article class="card"><div><h3>यात्रा की तैयारी</h3><p>रूट, मौसम और जरूरी सामान की जानकारी लेकर सफर शुरू करें।</p></div></article>
+  <article class="card"><div><h3>बजट प्लानिंग</h3><p>यात्रा का बजट पहले तय करें और खर्च का हिसाब रखें।</p></div></article>
+  <article class="card"><div><h3>स्थानीय अनुभव</h3><p>स्थानीय संस्कृति, खान-पान और जगहों का सम्मान करें।</p></div></article>
+ </div>
+</section>
+<section id="contact">
+ <h2 class="section-title">हमसे जुड़ें</h2><p class="sub">नई यात्राओं और वीडियो अपडेट के लिए सोशल मीडिया पर फॉलो करें।</p>
+ <div class="social">
+  <a class="btn" href="https://www.youtube.com/@BishtAITravel" target="_blank" rel="noopener">YouTube</a>
+  <a class="btn" href="https://www.facebook.com/share/19vNUdXFYH/" target="_blank" rel="noopener">Facebook</a>
+ </div>
+</section>
+</main>
+<footer>© 2026 Bisht Travel India. Made for travel lovers.</footer>
+<script>
+let english=false;
+function toggleLang(){
+ english=!english;
+ document.getElementById('heroTitle').innerHTML=english?'Explore the beauty of <span class="gold">India with us</span>':'भारत की खूबसूरती <span class="gold">देखिए हमारे साथ</span>';
+ document.getElementById('heroText').textContent=english?'Discover amazing places in India with travel videos, helpful guides and stories from the road.':'घूमिए भारत की शानदार जगहों पर — ट्रैवल वीडियो, उपयोगी गाइड और नई यात्राओं की कहानियों के साथ।';
+ document.getElementById('explore').textContent=english?'Explore destinations':'जगहें एक्सप्लोर करें';
+ document.getElementById('destTitle').textContent=english?'Popular Destinations':'लोकप्रिय जगहें';
+ document.getElementById('destSub').textContent=english?'Beautiful travel destinations across India':'भारत के कुछ खूबसूरत ट्रैवल डेस्टिनेशन';
+ document.getElementById('videoTitle').textContent=english?'Travel Videos':'ट्रैवल वीडियो';
+ document.getElementById('videoSub').textContent=english?'Watch our latest videos on YouTube':'हमारे नए वीडियो YouTube पर देखें';
+ document.getElementById('guideTitle').textContent=english?'Travel Guides':'ट्रैवल गाइड';
+ document.getElementById('guideSub').textContent=english?'Helpful information before your journey':'यात्रा से पहले काम आने वाली जानकारी';
+}
+</script>
+</body>
+</html>
